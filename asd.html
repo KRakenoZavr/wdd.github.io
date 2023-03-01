@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./asd.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- header -->
+      <!-- <div class="header">
+        <div class="header-text">Главная</div>
+        <div class="header-text">Церемония</div>
+        <div class="header-text">Спасибо</div>
+      </div> -->
+      <!-- main -->
+      <div class="main">
+        <div class="main-container">
+          <div class="main-wrapper">
+            <div class="main-text-wrapper ls-1">
+              <div class="font-1">Приглашение на свадьбу</div>
+              <div class="font-3">Галым и Альмина</div>
+              <div class="main-img-container">
+                <img src="./flower.webp" />
+              </div>
+              <div>Будем очень рады видеть вас в этот чудесный день</div>
+              <div class="vr-delim"></div>
+              <div class="ls-2">23 сентября 2035</div>
+              <div class="main-footer">Дворец бракосочетания №1</div>
+              <div class="main-info">
+                <div class="btn-container">
+                  <div><a href="#ceremony">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ceremony -->
+      <div class="ceremony" id="ceremony">
+        <div>
+          <div class="c-first font-44">Наша свадьба</div>
+          <div class="c-second">
+            <div class="c-second-container">
+              <div class="c-s-w mr-2 font-18">
+                <div class="c-title font-22 text-left">когда</div>
+                <div class="text-left">23 сентября 2035</div>
+                <div class="text-left">17:00</div>
+              </div>
+              <div class="vr-delim"></div>
+              <div class="c-s-w ml-2 font-18">
+                <div class="c-title font-22 text-right">где</div>
+                <div class="text-right">Дворец бракосочетания №1</div>
+                <div class="text-right">ул. Кабанбай батыра 1, Астана</div>
+                <div class="text-right">Казахстан</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ty -->
+      <div class="ty">
+        <div class="img-container">
+          <img src="./qwe.png" />
+        </div>
+        <div class="ty-text font-28">
+          Будем рады видеть Вас <br />
+          на нашем празднике!
+        </div>
+        <div class="img-container tr">
+          <img src="./qwe.png" />
+        </div>
+      </div>
+      <!-- footer -->
+      <!-- <div class="footer"></div> -->
+
+      <script>
+        const throttle = (func, delay) => {
+          let timeout = null
+          let cooldown = true
+          return (...args) => {
+            if (cooldown) {
+              cooldown = false
+              timeout = setTimeout(() => {
+                cooldown = true
+              }, delay)
+              func(...args)
+            }
+          }
+        }
+
+        const debounce = (func, delay) => {
+          let timeout = null
+          return (...args) => {
+            if (timeout !== null) {
+              clearTimeout(timeout)
+              timeout = null
+            }
+            timeout = setTimeout(() => {
+              func(...args)
+            }, delay)
+          }
+        }
+
+        function asd() {
+          console.log("asd")
+        }
+
+        const mainContainer = document.querySelector(".main")
+
+        let timeout = null
+        let cooldown = true
+
+        document.addEventListener("scroll", (e) => {
+          const windowHeight = window.innerHeight
+          const scrollHeight = window.scrollY
+
+          const cf = scrollHeight / windowHeight / 10
+
+          mainContainer.style.backgroundPositionY = `-${cf * windowHeight}px`
+        })
+      </script>
+    </div>
+  </body>
+</html>

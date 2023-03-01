@@ -1,0 +1,368 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app {
+  /* background: url("./asd.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; */
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+
+  z-index: 2;
+}
+
+.header-text {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #fff;
+
+  transition: color 0.4s ease 0s;
+}
+
+.header-text:hover {
+  color: #b09259;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 100vh;
+
+  background: url("./asd.webp");
+  background-position-x: center;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-container {
+  display: flex;
+  background: #fff;
+  padding: 16px;
+  min-width: 50%;
+  min-height: 50%;
+
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  background: #eae7e5cc;
+}
+
+.main-text-wrapper {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+  font-style: italic;
+  color: rgb(94, 92, 92);
+  text-align: center;
+}
+
+.main-text-wrapper div {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.font-1 {
+  font-size: 19px;
+}
+
+.font-44 {
+  font-size: 44px;
+}
+
+.font-3 {
+  font-size: 74px;
+}
+
+.main-img-container {
+  margin-top: 36px !important;
+  margin-bottom: 36px !important;
+}
+
+.main-footer {
+  margin-top: 48px !important;
+}
+
+.main-info {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container {
+  background: #5d4c59;
+  color: #fffdfc;
+  font-style: normal;
+  padding: 4px 16px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.ceremony {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background: #dfeff2;
+  color: #b09259;
+}
+
+.c-first {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+  letter-spacing: 2px;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.c-second {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.c-second-container {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  justify-content: space-evenly;
+  padding: 12px;
+}
+
+.c-s-w {
+  padding: 12px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.c-s-w div {
+  padding: 6px;
+}
+
+.text-left {
+  text-align: right;
+}
+
+.text-right {
+  text-align: left;
+}
+
+.ml-2 {
+  margin-left: 32px;
+}
+
+.mr-2 {
+  margin-right: 32px;
+}
+
+.c-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  /* text-align: center; */
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.ty {
+  max-height: 300px;
+  height: 20vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-28 {
+  font-size: 28px;
+}
+
+.ty-text {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+
+  color: #b09259;
+  margin: 0 24px;
+  text-align: center;
+}
+
+.ls-1 {
+  letter-spacing: 0.05em;
+}
+
+.ls-2 {
+  letter-spacing: 0.55em;
+}
+
+.vr-delim {
+  width: 1px;
+  background: #b09259;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.img-container img {
+  height: 100px;
+}
+
+.tr {
+  transform: scaleX(-1);
+}
+
+.footer {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 761px) and (max-width: 1300px) {
+  .main-container {
+    width: 75%;
+    min-height: 75%;
+  }
+
+  /* .font-1 {
+    font-size: 16px;
+  } */
+
+  .font-3 {
+    font-size: 68px;
+  }
+
+  .font-44 {
+    font-size: 40px;
+  }
+
+  .font-28 {
+    font-size: 24px;
+  }
+
+  .ty-text {
+    margin: 0 12px;
+  }
+
+  /* .font-22 {
+    font-size: 20px;
+  } */
+
+  /* .c-first {
+    margin-top: 18px;
+  } */
+
+  .font-18 {
+    font-size: 16px;
+  }
+
+  /* .c-second-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  } */
+
+  /* .c-second {
+    padding-left: 0px;
+    padding-right: 0px;
+  } */
+
+  .ml-2 {
+    margin-left: 26px;
+  }
+
+  .mr-2 {
+    margin-right: 26px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .main-container {
+    width: 85%;
+    min-height: 85%;
+  }
+
+  .font-1 {
+    font-size: 16px;
+  }
+
+  .font-3 {
+    font-size: 60px;
+  }
+
+  .font-44 {
+    font-size: 36px;
+  }
+
+  .font-28 {
+    font-size: 22px;
+  }
+
+  .ty-text {
+    margin: 0 8px;
+  }
+
+  .font-22 {
+    font-size: 20px;
+  }
+
+  .c-first {
+    margin-top: 12px;
+  }
+
+  .font-18 {
+    font-size: 14px;
+  }
+
+  .c-second-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .c-second {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .ml-2 {
+    margin-left: 12px;
+  }
+
+  .mr-2 {
+    margin-right: 12px;
+  }
+}
