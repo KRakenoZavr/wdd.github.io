@@ -72,6 +72,7 @@ a:active {
   padding: 16px;
   min-width: 50%;
   min-height: 50%;
+  max-height: 100%;
 
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
@@ -135,7 +136,9 @@ a:active {
 
 .ceremony {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
   height: 50vh;
   background: #dfeff2;
   color: #b09259;
@@ -148,7 +151,8 @@ a:active {
   justify-content: center;
   text-align: center;
   padding: 24px;
-  margin-top: 24px;
+  /* margin-top: 24px; */
+  margin-top: -18px;
 }
 
 .c-second {
@@ -207,6 +211,7 @@ a:active {
 
 .ty {
   max-height: 300px;
+  min-height: 200px;
   height: 20vh;
 
   display: flex;
@@ -340,9 +345,9 @@ a:active {
     font-size: 20px;
   }
 
-  .c-first {
+  /* .c-first {
     margin-top: 12px;
-  }
+  } */
 
   .font-18 {
     font-size: 14px;
@@ -364,5 +369,37 @@ a:active {
 
   .mr-2 {
     margin-right: 12px;
+  }
+}
+
+@media (orientation: landscape) and (max-device-height: 520px) {
+  .main-container {
+    /* height: calc(100% - 32px); */
+  }
+
+  .main-img-container {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .main-footer {
+    margin-top: 28px !important;
+  }
+
+  .main-text-wrapper div {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  /* .c-first {
+    margin-top: 0px;
+  } */
+
+  .ceremony {
+    height: 100vh;
+  }
+
+  .font-3 {
+    font-size: 56px;
   }
 }
